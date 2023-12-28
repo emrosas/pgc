@@ -1,0 +1,35 @@
+li {
+  list-style: none; /* Remove default bullet point */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  background-color: var(--pale-1);
+  border-radius: 1rem;
+  border: var(--border-1);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.username {
+  font-size: 1.5rem;
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+.score-holder {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.score-tag {
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.score {
+  font-size: 2.25rem;
+  font-weight: 700;
+}

@@ -1,22 +1,21 @@
 import React from "react";
 import Logo from "../assets/logo.svg";
 import "./GameScreen.css";
+import Navbar from "../Navbar/Navbar";
+import PlayerCard from "../PlayerCard/PlayerCard";
 
 const GameScreen = ({ handleGameEnd }) => {
   return (
     <div className="game-screen-wrapper">
-      <nav>
-        <div className="logo-wrapper">
-          <img src={Logo} alt="Trophy App Logo" />
-          <div className="navbar-title-holder">
-            <h2>Party Game Companion</h2>
-            <p className="slogan">“Who’s keeping score?” NO MORE...</p>
-          </div>
-        </div>
-        <button className="btn-secondary" onClick={handleGameEnd}>
-          End Game
-        </button>
-      </nav>
+      <Navbar handleGameEnd={handleGameEnd} />
+      <main>
+        <ul>
+          <PlayerCard name="Jimmmy" username="Necesita un Baño" score="100" />
+          <PlayerCard name="Cletty" username="La mas Megafona" score="75" />
+          <PlayerCard name="Erick" username="Es bien TOP" score="50" />
+        </ul>
+        <section>This is a Section</section>
+      </main>
     </div>
   );
 };

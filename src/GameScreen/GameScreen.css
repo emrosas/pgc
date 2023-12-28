@@ -4,28 +4,16 @@
   background-color: var(--light-2);
 }
 
-nav {
+main {
   display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  background-color: var(--light-1);
-  border-radius: 1rem;
-  box-shadow: 0px 12px 8px 0px rgba(154, 145, 132, 0.25);
-  border: 2px solid #1c181730;
 }
 
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-title-holder {
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 60%;
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
-}
-
-.slogan {
-  font-size: 1.2rem;
-  font-weight: 400;
+  gap: 1rem;
 }
