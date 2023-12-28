@@ -12,8 +12,8 @@ button {
 }
 button:hover {
   background-color: var(--brand-1-hover);
-  box-shadow: 0px 12px 8px 0px rgba(154, 145, 132, 0.25);
-  transform: translateY(-4px);
+  box-shadow: 0px 10px 8px 0px rgba(154, 145, 132, 0.25);
+  transform: translateY(-4%);
 }
 
 .btn-secondary {

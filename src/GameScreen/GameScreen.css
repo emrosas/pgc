@@ -37,6 +37,7 @@ aside {
   padding: 2rem;
   border: var(--border-2);
   gap: 1rem;
+  max-height: 20rem;
 }
 
 .modal-info {
