@@ -15,6 +15,12 @@ const GameScreen = ({ handleGameEnd }) => {
             <PlayerCard name="Jimmmy" username="Necesita un Baño" score="100" />
             <PlayerCard name="Cletty" username="La mas Megafona" score="75" />
             <PlayerCard name="Erick" username="Es bien TOP" score="50" />
+            <PlayerCard name="Jimmmy" username="Necesita un Baño" score="100" />
+            <PlayerCard name="Cletty" username="La mas Megafona" score="75" />
+            <PlayerCard name="Erick" username="Es bien TOP" score="50" />
+            <PlayerCard name="Jimmmy" username="Necesita un Baño" score="100" />
+            <PlayerCard name="Cletty" username="La mas Megafona" score="75" />
+            <PlayerCard name="Erick" username="Es bien TOP" score="50" />
           </ul>
           <aside>
             <div className="functionality-modal">

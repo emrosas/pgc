@@ -1,6 +1,5 @@
 .game-screen-wrapper {
   height: 100vh;
-  background-color: var(--light-2);
   display: flex;
 }
 

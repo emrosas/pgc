@@ -17,7 +17,7 @@
   --pale-2: hsl(37, 100%, 90%);
 
   color: var(--dark-1);
-  background-color: var(--light-1);
+  background-color: var(--light-2);
 
   /* Spacing Variables */
   --page-padding: 4rem;
