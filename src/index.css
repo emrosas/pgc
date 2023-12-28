@@ -7,9 +7,12 @@
 
   /* Color Variables */
   --light-1: hsl(36, 100%, 88%);
+  --light-2: hsl(36, 50%, 98%);
   --dark-1: hsl(12, 10%, 20%);
   --brand-1: hsl(42, 100%, 72%);
+  --brand-1-hover: hsl(42, 100%, 62%);
   --brand-2: hsl(14, 100%, 64%);
+  --brand-2-hover: hsl(14, 100%, 54%);
 
   color: var(--dark-1);
   background-color: var(--light-1);
@@ -33,9 +36,24 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: unset;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: unset;
+}
+
+h2 {
+  font-size: 2rem;
   margin: unset;
 }
 

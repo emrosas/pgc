@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import GameStart from "./GameStart/GameStart";
+import GameScreen from "./GameScreen/GameScreen";
 
 function App() {
   const [gameStart, setGameStart] = useState(false);
@@ -17,15 +18,7 @@ function App() {
     <>
       {!gameStart && <GameStart handleGameStart={handleGameStart} />}
 
-      {gameStart && (
-        <div className="container">
-          <h1>Game started</h1>
-          <p>Insert players</p>
-          <button className="end-game" onClick={handleGameEnd}>
-            End Game
-          </button>
-        </div>
-      )}
+      {gameStart && <GameScreen handleGameEnd={handleGameEnd} />}
     </>
   );
 }
