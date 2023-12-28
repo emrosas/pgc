@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import GameStart from "./GameStart/GameStart";
 
 function App() {
   const [gameStart, setGameStart] = useState(false);
@@ -14,15 +15,7 @@ function App() {
 
   return (
     <>
-      {!gameStart && (
-        <div className="container">
-          <h1>Party Game Companion</h1>
-          <p>“Who’s keeping score?” NO MORE...</p>
-          <button className="start-game" onClick={handleGameStart}>
-            Start Game
-          </button>
-        </div>
-      )}
+      {!gameStart && <GameStart handleGameStart={handleGameStart} />}
 
       {gameStart && (
         <div className="container">

@@ -1,10 +1,10 @@
 button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--dark-1);
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #0000004d;
   cursor: pointer;
 }
 .start-game {
@@ -13,12 +13,4 @@ button {
 
 .end-game {
   background-color: var(--brand-2);
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  place-content: center;
-  text-align: center;
-  gap: 1rem;
 }
