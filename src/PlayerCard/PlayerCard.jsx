@@ -1,7 +1,12 @@
 import React from "react";
 import "./PlayerCard.css";
 
-const PlayerCard = ({ name, username, score }) => {
+const PlayerCard = ({ name, username, score, setPlayers }) => {
+  const handleDelete = () => {
+    setPlayers((prevPlayers) => {
+      return prevPlayers.filter((player) => player.username !== username);
+    });
+  };
   return (
     <li>
       <div>
@@ -12,6 +17,9 @@ const PlayerCard = ({ name, username, score }) => {
         <p className="score-tag">Score:</p>
         <p className="score">{score}</p>
       </div>
+      <button className="delete-btn" onClick={handleDelete}>
+        Delete Player X
+      </button>
     </li>
   );
 };

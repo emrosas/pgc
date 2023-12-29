@@ -23,6 +23,7 @@ const GameScreen = ({ handleGameEnd }) => {
                 name={player.name}
                 username={player.username}
                 score={player.score}
+                setPlayers={setPlayers}
               />
             ))}
             {/* <PlayerCard name="Jimmmy" username="Necesita un Baño" score="100" />
