@@ -12,7 +12,7 @@ const PlayerAddForm = ({ handleAddPlayer, players }) => {
     const newPlayer = {
       name: e.target.name.value,
       username: e.target.username.value,
-      score: e.target.score.value,
+      score: Number(e.target.score.value),
     };
     handleAddPlayer(newPlayer);
     formRef.current.reset();
@@ -55,7 +55,7 @@ const PlayerAddForm = ({ handleAddPlayer, players }) => {
               type="number"
               name="score"
               id="score"
-              min="1"
+              min="0"
               placeholder="Initial Score"
             />
           </div>

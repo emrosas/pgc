@@ -14,6 +14,7 @@
   --brand-2: hsl(14, 100%, 64%);
   --brand-2-hover: hsl(14, 100%, 54%);
   --pale-1: hsl(39, 90%, 94%);
+  --pale-1-hover: hsl(39, 90%, 84%);
   --pale-2: hsl(37, 100%, 90%);
 
   color: var(--dark-1);

@@ -24,3 +24,11 @@ button:hover {
 .btn-secondary:hover {
   background-color: var(--brand-2-hover);
 }
+
+.btn-pale {
+  background-color: var(--pale-1);
+}
+
+.btn-pale:hover {
+  background-color: var(--pale-1-hover);
+}
