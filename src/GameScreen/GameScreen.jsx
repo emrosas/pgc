@@ -3,6 +3,7 @@ import "./GameScreen.css";
 import Navbar from "../Navbar/Navbar";
 import PlayerCard from "../PlayerCard/PlayerCard";
 import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
+import ModalAddPoints from "../ModalAddPoints/ModalAddPoints";
 
 const GameScreen = ({ handleGameEnd }) => {
   const [players, setPlayers] = useState([]);
@@ -36,17 +37,13 @@ const GameScreen = ({ handleGameEnd }) => {
           </ul>
 
           <aside>
-            <div className="functionality-modal">
+            <ModalAddPoints />
+            <div className="modal-wrapper">
               <h4>Functionality Modal</h4>
               <p className="modal-info">This it where the magic happens!</p>
               <button className="modal-btn">Do Nothing</button>
             </div>
-            <div className="functionality-modal">
-              <h4>Functionality Modal</h4>
-              <p className="modal-info">This it where the magic happens!</p>
-              <button className="modal-btn">Do Nothing</button>
-            </div>
-            <div className="functionality-modal">
+            <div className="modal-wrapper">
               <h4>Functionality Modal</h4>
               <p className="modal-info">This it where the magic happens!</p>
               <button className="modal-btn">Do Nothing</button>
