@@ -24,16 +24,18 @@ const PlayerAddForm = ({ handleAddPlayer, players }) => {
     changePlayersAdded();
   };
   return (
-    <>
+    <div className="form-holder">
       {!playersAdded ? (
         <form onSubmit={handleSubmit} ref={formRef}>
           <div className="add-player-header">
             <h4>Add New Player</h4>
             <div className="add-player-buttons">
               <button type="submit">Add Player</button>
-              <button className="btn-secondary" onClick={handleCancel}>
-                Cancel
-              </button>
+              {players.length > 0 && (
+                <button className="btn-secondary" onClick={handleCancel}>
+                  Cancel
+                </button>
+              )}
             </div>
           </div>
           <div className="add-player-fields">
@@ -61,7 +63,7 @@ const PlayerAddForm = ({ handleAddPlayer, players }) => {
       ) : (
         <button onClick={changePlayersAdded}> Add New Player +</button>
       )}
-    </>
+    </div>
   );
 };
 export default PlayerAddForm;
