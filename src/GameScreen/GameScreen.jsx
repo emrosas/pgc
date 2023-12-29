@@ -52,15 +52,19 @@ const GameScreen = ({ handleGameEnd }) => {
               players={players}
               updatePlayerScore={updatePlayerScore}
             />
-            <div className="modal-wrapper">
-              <h4>Functionality Modal</h4>
-              <p className="modal-info">This it where the magic happens!</p>
-              <button className="modal-btn">Do Nothing</button>
+            <div className="modal-wrapper future-feature">
+              <h4>Random Player Picker</h4>
+              <p className="modal-info">
+                We are working on this feature. You can expect it to be released
+                soon.
+              </p>
             </div>
-            <div className="modal-wrapper">
+            <div className="modal-wrapper future-feature">
               <h4>Functionality Modal</h4>
-              <p className="modal-info">This it where the magic happens!</p>
-              <button className="modal-btn">Do Nothing</button>
+              <p className="modal-info">
+                We are working on this feature. You can expect it to be released
+                soon.
+              </p>
             </div>
           </aside>
         </section>
