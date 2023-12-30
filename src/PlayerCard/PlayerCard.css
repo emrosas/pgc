@@ -12,6 +12,36 @@ li {
   position: relative;
 }
 
+.first-place {
+  background-color: #ffedc2;
+  border: 1px solid #ffc847;
+  box-shadow: 0px 0px 16px 0px rgba(255, 180, 0, 0.6);
+}
+
+.first-place .score {
+  font-size: 3.5rem;
+}
+
+.second-place {
+  background-color: #f9fafb;
+  border: 1px solid #91a3b5;
+  box-shadow: 0px 0px 8px 0px rgba(102, 128, 153, 0.4);
+}
+
+.second-place .score {
+  font-size: 2.875rem;
+}
+
+.third-place {
+  border: 1px solid #e3a763;
+  background-color: #fce2c5;
+  box-shadow: 0px 0px 8px 0px rgba(242, 134, 13, 0.25);
+}
+
+.third-place .score {
+  font-size: 2.375rem;
+}
+
 .username {
   font-size: 1.5rem;
   opacity: 0.5;
@@ -21,7 +51,7 @@ li {
 .score-holder {
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  align-items: baseline;
 }
 
 .score-tag {
@@ -52,4 +82,9 @@ li {
 .delete-btn:hover {
   opacity: 1;
   background-color: var(--brand-2);
+}
+
+.place-holder {
+  display: flex;
+  gap: 2rem;
 }

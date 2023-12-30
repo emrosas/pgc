@@ -46,6 +46,7 @@ const GameScreen = ({ handleGameEnd }) => {
                   username={player.username}
                   score={player.score}
                   setPlayers={setPlayers}
+                  index={players.indexOf(player)}
                 />
               ))}
             <PlayerAddForm
