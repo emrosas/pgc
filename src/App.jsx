@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import GameStart from "./GameStart/GameStart";
 import GameScreen from "./GameScreen/GameScreen";
 
 function App() {
-  const [gameStart, setGameStart] = useState(false);
+  const [gameStart, setGameStart] = useState(
+    () => JSON.parse(localStorage.getItem("gameStart")) || false
+  );
+
+  useEffect(() => {
+    localStorage.setItem("gameStart", JSON.stringify(gameStart));
+  }, [gameStart]);
 
   const handleGameStart = () => {
     setGameStart(true);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./GameScreen.css";
 import Navbar from "../Navbar/Navbar";
 import PlayerCard from "../PlayerCard/PlayerCard";
@@ -6,7 +6,13 @@ import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
 import ModalAddPoints from "../ModalAddPoints/ModalAddPoints";
 
 const GameScreen = ({ handleGameEnd }) => {
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState(
+    () => JSON.parse(localStorage.getItem("players")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("players", JSON.stringify(players));
+  }, [players]);
 
   const handleAddPlayer = (newPlayer) => {
     setPlayers([...players, newPlayer]);
@@ -27,7 +33,7 @@ const GameScreen = ({ handleGameEnd }) => {
     <div className="game-screen-wrapper">
       <main>
         <div></div>
-        <Navbar handleGameEnd={handleGameEnd} />
+        <Navbar handleGameEnd={handleGameEnd} setPlayers={setPlayers} />
         <section>
           <ul>
             {players
