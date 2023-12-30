@@ -1,6 +1,6 @@
 .player-select {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .points-holder {
@@ -13,7 +13,7 @@
 .points-input {
   text-align: center;
   max-width: 5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 

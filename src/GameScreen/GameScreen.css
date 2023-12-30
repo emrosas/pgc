@@ -39,7 +39,7 @@ aside {
   flex-grow: 1;
   padding: 2rem;
   border: var(--border-2);
-  gap: 1rem;
+  gap: 0.5rem;
   max-height: 20rem;
   text-align: center;
 }

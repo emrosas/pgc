@@ -1,0 +1,20 @@
+.random-player-holder {
+  display: flex;
+  width: 100%;
+}
+
+.random-player {
+  pointer-events: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  margin-right: -0.5rem;
+  width: 100%;
+}
+
+.random-player-button {
+  margin-left: -0.5rem;
+}
+
+.random-player-button:hover {
+  transform: none;
+  box-shadow: none;
+}

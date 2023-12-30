@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import PlayerCard from "../PlayerCard/PlayerCard";
 import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
 import ModalAddPoints from "../ModalAddPoints/ModalAddPoints";
+import ModalRandomPicker from "../ModalRandomPicker/ModalRandomPicker";
 
 const GameScreen = ({ handleGameEnd }) => {
   const [players, setPlayers] = useState(
@@ -58,13 +59,7 @@ const GameScreen = ({ handleGameEnd }) => {
               players={players}
               updatePlayerScore={updatePlayerScore}
             />
-            <div className="modal-wrapper future-feature">
-              <h4>Random Player Picker</h4>
-              <p className="modal-info">
-                We are working on this feature. You can expect it to be released
-                soon.
-              </p>
-            </div>
+            <ModalRandomPicker players={players} />
             <div className="modal-wrapper future-feature">
               <h4>Functionality Modal</h4>
               <p className="modal-info">
