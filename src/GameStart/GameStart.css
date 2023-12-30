@@ -37,6 +37,9 @@ header {
 
 .start-game {
   width: 100%;
+  padding: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .trophy-shadow {
@@ -46,4 +49,24 @@ header {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding-left: var(--page-padding-tablet);
+    padding-right: var(--page-padding-tablet);
+  }
+
+  .start-comp {
+    gap: 1rem;
+  }
+
+  .start-logo {
+    width: 8rem;
+  }
+
+  .start-game {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
 }

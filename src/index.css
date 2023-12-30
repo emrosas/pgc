@@ -22,6 +22,8 @@
 
   /* Spacing Variables */
   --page-padding: 4rem;
+  --page-padding-tablet: 1.5rem;
+  --page-padding-mobile: 1rem;
 
   /* Border Variables */
   --border-1: 1px solid #1c181750;
@@ -76,6 +78,34 @@ h4 {
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   margin: unset;
+}
+
+/* Media Query for Tablet */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 479px) {
+  /* Add your mobile-specific CSS here */
 }
