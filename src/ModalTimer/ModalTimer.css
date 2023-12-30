@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.timer-red {
+  color: red;
+}
+
 .timer-buttons {
   display: flex;
   align-items: center;
