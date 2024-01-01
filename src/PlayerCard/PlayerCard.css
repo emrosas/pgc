@@ -88,3 +88,29 @@ li {
   display: flex;
   gap: 2rem;
 }
+
+/* Media Query for Mobile */
+@media (max-width: 479px) {
+  li {
+    flex-direction: column;
+  }
+  .place-holder div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .trophy {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    width: 1.5rem;
+  }
+  .first-place .score,
+  .second-place .score,
+  .third-place .score {
+    font-size: 2rem;
+  }
+  .score-tag {
+    font-size: 1.25rem;
+  }
+}
