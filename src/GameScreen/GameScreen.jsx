@@ -6,6 +6,8 @@ import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
 import ModalAddPoints from "../ModalAddPoints/ModalAddPoints";
 import ModalRandomPicker from "../ModalRandomPicker/ModalRandomPicker";
 import ModalTimer from "../ModalTimer/ModalTimer";
+import Extras from "../assets/extras.svg";
+import Cancel from "../assets/cancel.svg";
 
 const GameScreen = ({ handleGameEnd }) => {
   const [players, setPlayers] = useState(
@@ -29,6 +31,12 @@ const GameScreen = ({ handleGameEnd }) => {
         return player;
       })
     );
+  };
+
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const handleMenuToggle = () => {
+    setOpenMenu(!openMenu);
   };
 
   return (
@@ -56,7 +64,7 @@ const GameScreen = ({ handleGameEnd }) => {
             />
           </ul>
 
-          <aside>
+          <aside className={openMenu ? "mobile-menu-holder" : ""}>
             <ModalAddPoints
               players={players}
               updatePlayerScore={updatePlayerScore}
@@ -65,6 +73,16 @@ const GameScreen = ({ handleGameEnd }) => {
             <ModalTimer />
           </aside>
         </section>
+        <div className="mobile-menu">
+          <button
+            className={`mobile-menu-button ${
+              openMenu ? "mobile-menu-button-open" : ""
+            }`}
+            onClick={handleMenuToggle}
+          >
+            <img src={openMenu ? Cancel : Extras} alt="Extra features icon" />
+          </button>
+        </div>
       </main>
     </div>
   );
