@@ -15,12 +15,14 @@ const ModalTimer = () => {
   };
   const startTimer = (e) => {
     e.preventDefault();
+    if (intervalRef.current) return;
     if (timer > 0) {
       intervalRef.current = setInterval(() => {
         setTimer((prevTimer) => prevTimer - 1);
       }, 1000);
       setTimeout(() => {
         clearInterval(intervalRef.current);
+        intervalRef.current = null;
       }, timer * 1000);
     }
   };
@@ -28,11 +30,13 @@ const ModalTimer = () => {
   const pauseTimer = (e) => {
     e.preventDefault();
     clearInterval(intervalRef.current);
+    intervalRef.current = null;
   };
 
   const restartTimer = (e) => {
     e.preventDefault();
     clearInterval(intervalRef.current);
+    intervalRef.current = null;
     setTimer(lastTimer);
   };
 

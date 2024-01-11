@@ -116,4 +116,7 @@ aside {
     padding: var(--page-padding-mobile);
     padding-bottom: calc(var(--page-padding-mobile) + 4rem);
   }
+  .modal-wrapper {
+    padding: 1rem;
+  }
 }

@@ -40,3 +40,14 @@
 .timer-start-button {
   width: 100%;
 }
+
+@media (max-width: 479px) {
+  .timer-title-holder {
+    min-width: 0;
+    flex-shrink: 1;
+    flex-grow: 0;
+  }
+  .timer-header {
+    width: 100%;
+  }
+}
