@@ -1,4 +1,4 @@
-# Party Game Companion App
+# 🏆 Party Game Companion App
 
 ### How it Started
 This project started when I was at a friend's birthday party and we decided to do a couple of games and give out a price for the winner. We wanted to keep score during the games and did so by writing them down in a piece of paper. Everyone kept asking us for the score and who was currently on the lead.
