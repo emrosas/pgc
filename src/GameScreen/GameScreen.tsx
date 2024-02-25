@@ -41,11 +41,11 @@ const GameScreen = () => {
 
   return (
     <div className="game-screen-wrapper">
-      <main>
+      <main className="px-page py-6">
         <div></div>
         <Navbar />
-        {/* <section>
-          <ul>
+        <section>
+          {/* <ul>
             {players
               .sort((a, b) => b.score - a.score)
               .map((player) => (
@@ -62,17 +62,17 @@ const GameScreen = () => {
               handleAddPlayer={handleAddPlayer}
               players={players}
             />
-          </ul>
+          </ul> */}
 
-          <aside className={openMenu ? "mobile-menu-holder" : ""}>
+          {/* <aside className={openMenu ? "mobile-menu-holder" : ""}>
             <ModalAddPoints
               players={players}
               updatePlayerScore={updatePlayerScore}
             />
             <ModalRandomPicker players={players} />
             <ModalTimer />
-          </aside>
-        </section> */}
+          </aside> */}
+        </section>
         {/* <div className="mobile-menu">
           <button
             className={`mobile-menu-button ${

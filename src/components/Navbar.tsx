@@ -24,7 +24,7 @@ const Navbar = () => {
           </p>
         </div>
       </div>
-      <Button text="End Game" onClick={handleEndGame} />
+      <Button text="End Game" onClick={handleEndGame} mode="secondary" />
     </nav>
   );
 };
