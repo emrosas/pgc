@@ -4,33 +4,23 @@
 @import "tailwindcss/utilities";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  /* Color Variables */
-  --light-1: #ffe7c2;
-  --light-2: hsl(36, 50%, 96%);
-  --dark-1: hsl(12, 10%, 20%);
-  --brand-1: hsl(42, 100%, 72%);
-  --brand-1-hover: hsl(42, 100%, 62%);
-  --brand-2: hsl(14, 100%, 64%);
-  --brand-2-hover: hsl(14, 100%, 54%);
-  --pale-1: hsl(39, 90%, 94%);
-  --pale-1-hover: hsl(39, 90%, 84%);
-  --pale-2: hsl(37, 100%, 90%);
-
-  color: var(--dark-1);
-  background-color: var(--light-2);
-
-  /* Spacing Variables */
-  --page-padding: 4rem;
-  --page-padding-tablet: 1.5rem;
-  --page-padding-mobile: 1rem;
-
   /* Border Variables */
   --border-1: 1px solid #1c181750;
   --border-2: 2px solid #1c181730;
+
+  /* Spacing Variables */
+  --page-main: var(--page-desktop);
+  --page-desktop: 4rem;
+  --page-tablet: 1.5rem;
+  --page-mobile: 1rem;
+
+  @media (max-width: 1024px) {
+    --page-main: var(--page-tablet);
+  }
+
+  @media (max-width: 768px) {
+    --page-main: var(--page-mobile);
+  }
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

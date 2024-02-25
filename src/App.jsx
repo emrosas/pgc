@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "./App.css";
-import GameStart from "./GameStart/GameStart";
+// import "./App.css";
+import GameStart from "./components/GameStart";
 import GameScreen from "./GameScreen/GameScreen";
 
 function App() {
@@ -22,9 +22,11 @@ function App() {
 
   return (
     <>
-      {!gameStart && <GameStart handleGameStart={handleGameStart} />}
-
-      {gameStart && <GameScreen handleGameEnd={handleGameEnd} />}
+      {gameStart ? (
+        <GameScreen handleGameEnd={handleGameEnd} />
+      ) : (
+        <GameStart handleGameStart={handleGameStart} />
+      )}
     </>
   );
 }

@@ -12,6 +12,10 @@ export default {
         "brand-3": "#FF7347",
         "dark-1": "#38302E",
         "dark-2": "#55504E",
+        "dark-3": "#736E6B",
+      },
+      spacing: {
+        page: "var(--page-main)",
       },
     },
     fontFamily: {
