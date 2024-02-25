@@ -1,50 +1,50 @@
 import React, { useEffect, useState } from "react";
 import "./GameScreen.css";
-import Navbar from "../Navbar/Navbar";
-import PlayerCard from "../PlayerCard/PlayerCard";
-import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
-import ModalAddPoints from "../ModalAddPoints/ModalAddPoints";
-import ModalRandomPicker from "../ModalRandomPicker/ModalRandomPicker";
-import ModalTimer from "../ModalTimer/ModalTimer";
+import Navbar from "../components/Navbar";
+// import PlayerCard from "../PlayerCard/PlayerCard";
+// import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
+// import ModalAddPoints from "../ModalAddPoints/ModalAddPoints";
+// import ModalRandomPicker from "../ModalRandomPicker/ModalRandomPicker";
+// import ModalTimer from "../ModalTimer/ModalTimer";
 import Extras from "../assets/extras.svg";
 import Cancel from "../assets/cancel.svg";
 
-const GameScreen = ({ handleGameEnd }) => {
-  const [players, setPlayers] = useState(
-    () => JSON.parse(localStorage.getItem("players")) || []
-  );
+const GameScreen = () => {
+  // const [players, setPlayers] = useState(
+  //   () => JSON.parse(localStorage.getItem("players")) || []
+  // );
 
-  useEffect(() => {
-    localStorage.setItem("players", JSON.stringify(players));
-  }, [players]);
+  // useEffect(() => {
+  //   localStorage.setItem("players", JSON.stringify(players));
+  // }, [players]);
 
-  const handleAddPlayer = (newPlayer) => {
-    setPlayers([...players, newPlayer]);
-  };
+  // const handleAddPlayer = (newPlayer) => {
+  //   setPlayers([...players, newPlayer]);
+  // };
 
-  const updatePlayerScore = (username, pointsToAdd) => {
-    setPlayers(
-      players.map((player) => {
-        if (player.username === username) {
-          player.score = player.score + Number(pointsToAdd);
-        }
-        return player;
-      })
-    );
-  };
+  // const updatePlayerScore = (username, pointsToAdd) => {
+  //   setPlayers(
+  //     players.map((player) => {
+  //       if (player.username === username) {
+  //         player.score = player.score + Number(pointsToAdd);
+  //       }
+  //       return player;
+  //     })
+  //   );
+  // };
 
-  const [openMenu, setOpenMenu] = useState(false);
+  // const [openMenu, setOpenMenu] = useState(false);
 
-  const handleMenuToggle = () => {
-    setOpenMenu(!openMenu);
-  };
+  // const handleMenuToggle = () => {
+  //   setOpenMenu(!openMenu);
+  // };
 
   return (
     <div className="game-screen-wrapper">
       <main>
         <div></div>
-        <Navbar handleGameEnd={handleGameEnd} setPlayers={setPlayers} />
-        <section>
+        <Navbar />
+        {/* <section>
           <ul>
             {players
               .sort((a, b) => b.score - a.score)
@@ -72,17 +72,16 @@ const GameScreen = ({ handleGameEnd }) => {
             <ModalRandomPicker players={players} />
             <ModalTimer />
           </aside>
-        </section>
-        <div className="mobile-menu">
+        </section> */}
+        {/* <div className="mobile-menu">
           <button
             className={`mobile-menu-button ${
               openMenu ? "mobile-menu-button-open" : ""
             }`}
-            onClick={handleMenuToggle}
-          >
+            onClick={handleMenuToggle}>
             <img src={openMenu ? Cancel : Extras} alt="Extra features icon" />
           </button>
-        </div>
+        </div> */}
       </main>
     </div>
   );

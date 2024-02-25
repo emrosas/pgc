@@ -2,8 +2,10 @@ import React from "react";
 import Logo from "../assets/logo.svg";
 import Shadow from "../assets/logo-shadow.png";
 import Button from "./ui/Button";
+import { useGameStore } from "../store";
 
-function GameStart({ handleGameStart }: any) {
+function GameStart() {
+  const startGame = useGameStore((state) => state.startGame);
   return (
     <header className="relative flex items-center bg-brand-1 justify-center min-h-screen px-page">
       <div className="relative z-30 flex flex-col justify-stretch">
@@ -16,7 +18,7 @@ function GameStart({ handleGameStart }: any) {
           <h1>Party Game Companion</h1>
           <p>“Who’s keeping score?” NO MORE...</p>
         </div>
-        <Button text="Start Game" onClick={handleGameStart} />
+        <Button text="Start Game" onClick={startGame} />
       </div>
       <img
         src={Shadow}
