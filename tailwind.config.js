@@ -13,6 +13,9 @@ export default {
         "dark-1": "#38302E",
         "dark-2": "#55504E",
         "dark-3": "#736E6B",
+        gold: "#FFC847",
+        silver: "#91A3B5",
+        bronze: "#E3A763",
       },
       spacing: {
         page: "var(--page-main)",

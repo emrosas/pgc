@@ -5,10 +5,6 @@ import { useGameStore } from "./store";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 function App() {
-  // useEffect(() => {
-  //   localStorage.setItem("gameStart", JSON.stringify(gameStart));
-  // }, [gameStart]);
-
   const { setItem } = useLocalStorage("gameStart");
 
   useEffect(() => {
@@ -20,7 +16,7 @@ function App() {
     return () => {
       unsubscribe();
     };
-  }, [setItem]);
+  }, [setItem, useGameStore]);
 
   const gameStarted = useGameStore((state) => state.gameStarted);
 

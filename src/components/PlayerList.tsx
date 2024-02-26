@@ -15,6 +15,7 @@ function PlayerList() {
             name={player.name}
             score={player.score}
             nickname={player.nickname}
+            index={players.indexOf(player)}
           />
         ))}
       <PlayerAddForm />

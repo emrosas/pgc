@@ -78,7 +78,7 @@ const PlayerAddForm = () => {
           </div>
         </form>
       ) : (
-        <button onClick={changeFormActive}> Add New Player +</button>
+        <Button text="Add New Player +" onClick={changeFormActive} />
       )}
     </div>
   );
