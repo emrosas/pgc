@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-type Player = {
+export type Player = {
   name: string;
   nickname?: string;
   score: number;
@@ -17,7 +17,7 @@ type GameStore = {
 };
 
 export const useGameStore = create<GameStore>((set) => ({
-  players: [],
+  players: [{ name: "Erick", nickname: "Mr Moon", score: 23 }],
   addPlayer: (player: Player) =>
     set((state) => ({ players: [...state.players, player] })),
   removePlayer: (player: Player) =>

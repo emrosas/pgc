@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./GameScreen.css";
 import Navbar from "../components/Navbar";
-// import PlayerCard from "../PlayerCard/PlayerCard";
-// import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
 // import ModalAddPoints from "../ModalAddPoints/ModalAddPoints";
 // import ModalRandomPicker from "../ModalRandomPicker/ModalRandomPicker";
 // import ModalTimer from "../ModalTimer/ModalTimer";
 import Extras from "../assets/extras.svg";
 import Cancel from "../assets/cancel.svg";
+import PlayerList from "../components/PlayerList";
 
 const GameScreen = () => {
   // const [players, setPlayers] = useState(
@@ -17,10 +16,6 @@ const GameScreen = () => {
   // useEffect(() => {
   //   localStorage.setItem("players", JSON.stringify(players));
   // }, [players]);
-
-  // const handleAddPlayer = (newPlayer) => {
-  //   setPlayers([...players, newPlayer]);
-  // };
 
   // const updatePlayerScore = (username, pointsToAdd) => {
   //   setPlayers(
@@ -40,30 +35,12 @@ const GameScreen = () => {
   // };
 
   return (
-    <div className="game-screen-wrapper">
-      <main className="px-page py-6">
+    <div className="h-screen flex">
+      <main className="px-page py-6 flex-grow">
         <div></div>
         <Navbar />
-        <section>
-          {/* <ul>
-            {players
-              .sort((a, b) => b.score - a.score)
-              .map((player) => (
-                <PlayerCard
-                  key={player.username}
-                  name={player.name}
-                  username={player.username}
-                  score={player.score}
-                  setPlayers={setPlayers}
-                  index={players.indexOf(player)}
-                />
-              ))}
-            <PlayerAddForm
-              handleAddPlayer={handleAddPlayer}
-              players={players}
-            />
-          </ul> */}
-
+        <section className="flex gap-8">
+          <PlayerList />
           {/* <aside className={openMenu ? "mobile-menu-holder" : ""}>
             <ModalAddPoints
               players={players}

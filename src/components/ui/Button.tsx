@@ -3,7 +3,7 @@ import React from "react";
 interface ButtonProps {
   text: string;
   mode?: "primary" | "secondary";
-  onClick: () => void;
+  onClick: (e: any) => void;
 }
 
 function Button({ text, onClick, mode = "primary" }: ButtonProps) {
