@@ -1,11 +1,9 @@
-import React, { useRef, useState } from "react";
-import "./PlayerAddForm.css";
-import Button from "../components/ui/Button";
+import React, { useState } from "react";
+import Button from "./ui/Button";
 import { useGameStore } from "../store";
 import { Player } from "../store";
 
 const PlayerAddForm = () => {
-  const formRef = useRef();
   // Get the players and the hook to add a player from the store
   const players = useGameStore((state) => state.players);
   const addPlayer = useGameStore((state) => state.addPlayer);

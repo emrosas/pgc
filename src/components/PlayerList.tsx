@@ -1,7 +1,7 @@
 import React from "react";
 import { useGameStore } from "../store";
 import PlayerCard from "../PlayerCard/PlayerCard";
-import PlayerAddForm from "../PlayerAddForm/PlayerAddForm";
+import PlayerAddForm from "./PlayerAddForm";
 
 function PlayerList() {
   const players = useGameStore((state) => state.players);
