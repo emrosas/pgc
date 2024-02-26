@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 export type Player = {
   name: string;
@@ -16,8 +17,11 @@ type GameStore = {
   endGame: () => void;
 };
 
+const { getItem } = useLocalStorage("gameStart");
+const savedGame = getItem();
+
 export const useGameStore = create<GameStore>((set) => ({
-  players: [{ name: "Erick", nickname: "Mr Moon", score: 23 }],
+  players: savedGame.players || [],
   addPlayer: (player: Player) =>
     set((state) => ({ players: [...state.players, player] })),
   removePlayer: (player: Player) =>
@@ -25,7 +29,7 @@ export const useGameStore = create<GameStore>((set) => ({
       players: state.players.filter((p) => p.name !== player.name),
     })),
   removeAllPlayers: () => set({ players: [] }),
-  gameStarted: false,
+  gameStarted: savedGame.gameStarted || false,
   startGame: () => set({ gameStarted: true }),
   endGame: () => set({ gameStarted: false }),
 }));
