@@ -23,6 +23,10 @@ const PlayerAddForm = () => {
   // Handle the form submission and add the player to the store
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    if (!playerToAdd.name || !playerToAdd.nickname) {
+      alert("Please fill all fields");
+      return;
+    }
     addPlayer(playerToAdd);
     changeFormActive();
     setPlayerToAdd(initialPlayer);
@@ -59,6 +63,7 @@ const PlayerAddForm = () => {
               value={playerToAdd.name}
               onChange={handleChange}
               placeholder="Player Name"
+              required
             />
             <input
               className="py-2 px-4 rounded-lg border-dark-3 placeholder:text-dark-1 placeholder:text-opacity-50 border border-opacity-25 focus:ring focus:outline-none focus:ring-brand-3 bg-brand-1 text-base font-medium flex-grow"
@@ -67,6 +72,7 @@ const PlayerAddForm = () => {
               value={playerToAdd.nickname}
               onChange={handleChange}
               placeholder="Nickname"
+              required
             />
             <input
               className="py-2 px-4 rounded-lg border-dark-3 placeholder:text-dark-1 placeholder:text-opacity-50 border border-opacity-25 focus:ring focus:outline-none focus:ring-brand-3 bg-brand-1 text-base font-medium flex-grow"
@@ -76,6 +82,7 @@ const PlayerAddForm = () => {
               value={Number(playerToAdd.score)}
               onChange={handleChange}
               placeholder="Initial Score"
+              required
             />
           </div>
         </form>
