@@ -1,4 +1,3 @@
-import React from "react";
 import { useGameStore } from "../store";
 import PlayerCard from "./PlayerCard";
 import PlayerAddForm from "./PlayerAddForm";

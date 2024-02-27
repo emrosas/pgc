@@ -1,4 +1,3 @@
-import React from "react";
 import Gold from "../assets/gold.svg";
 import Silver from "../assets/silver.svg";
 import Bronze from "../assets/bronze.svg";

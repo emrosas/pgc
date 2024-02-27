@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react";
+import { useState } from "react";
 import Minus from "../assets/minus.svg";
 import Plus from "../assets/plus.svg";
 import Button from "./ui/Button";

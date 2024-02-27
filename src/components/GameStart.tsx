@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../assets/logo.svg";
 import Shadow from "../assets/logo-shadow.png";
 import Button from "./ui/Button";

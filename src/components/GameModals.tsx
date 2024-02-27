@@ -1,4 +1,3 @@
-import React from "react";
 import Extras from "../assets/extras.svg";
 import Cancel from "../assets/cancel.svg";
 import ModalWrapper from "./ui/ModalWrapper";

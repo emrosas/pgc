@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import "./ModalTimer.css";
 import Start from "../assets/timer-start.svg";
 import Pause from "../assets/timer-pause.svg";
