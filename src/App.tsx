@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import GameStart from "./components/GameStart";
-import GameScreen from "./GameScreen/GameScreen";
+import GameScreen from "./components/GameScreen";
 import { useGameStore } from "./store";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 

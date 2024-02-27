@@ -14,7 +14,7 @@ const Navbar = () => {
     endGame();
   };
   return (
-    <nav className="flex justify-between py-6 px-page bg-brand-1 rounded-2xl border-2 border-dark-3 border-opacity-25 mb-8">
+    <nav className="flex justify-between py-6 px-page bg-brand-1 rounded-2xl border-2 border-dark-3 border-opacity-25 mt-page col-start-1 row-start-1 col-span-6">
       <div className="flex items-center w-12 sm:w-auto">
         <img src={Logo} alt="Trophy App Logo" />
         <div className="hidden flex-col ml-6 sm:flex">
