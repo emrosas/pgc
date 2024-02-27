@@ -11,7 +11,7 @@ function GameModals() {
       <div className="flex flex-col flex-grow gap-4">
         <ModalWrapper children={<ModalAddPoints />} />
         <ModalWrapper children={<ModalRandomPicker />} />
-        <ModalWrapper children={<div />} />
+        {/* <ModalWrapper children={<div />} /> */}
       </div>
     </aside>
   );
