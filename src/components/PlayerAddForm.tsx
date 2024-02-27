@@ -16,7 +16,9 @@ const PlayerAddForm = () => {
   // Handle the form input changes and keep local state updated
   const [playerToAdd, setPlayerToAdd] = useState(initialPlayer);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPlayerToAdd({ ...playerToAdd, [e.target.name]: e.target.value });
+    const value =
+      e.target.name === "score" ? parseInt(e.target.value, 10) : e.target.value;
+    setPlayerToAdd({ ...playerToAdd, [e.target.name]: value });
   };
   // Handle the form submission and add the player to the store
   const handleSubmit = (e: any) => {
@@ -71,7 +73,7 @@ const PlayerAddForm = () => {
               type="number"
               name="score"
               min="0"
-              value={playerToAdd.score}
+              value={Number(playerToAdd.score)}
               onChange={handleChange}
               placeholder="Initial Score"
             />

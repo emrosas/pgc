@@ -13,6 +13,7 @@ type GameStore = {
   addPlayer: (player: Player) => void;
   removePlayer: (name: string) => void;
   removeAllPlayers: () => void;
+  addPoints: (name: string, points: number) => void;
   gameStarted: boolean;
   startGame: () => void;
   endGame: () => void;
@@ -30,6 +31,12 @@ export const useGameStore = create<GameStore>((set) => ({
       players: state.players.filter((p) => p.name !== name),
     })),
   removeAllPlayers: () => set({ players: [] }),
+  addPoints: (name: string, points: number) =>
+    set((state) => ({
+      players: state.players.map((p) =>
+        p.name === name ? { ...p, score: p.score + points } : p
+      ),
+    })),
   gameStarted: savedGame.gameStarted || false,
   startGame: () => set({ gameStarted: true }),
   endGame: () => set({ gameStarted: false }),
