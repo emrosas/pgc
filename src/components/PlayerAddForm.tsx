@@ -45,7 +45,9 @@ const PlayerAddForm = () => {
   return (
     <div>
       {!FormActive ? (
-        <form className="flex flex-col" onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col overflow-visible"
+          onSubmit={handleSubmit}>
           <div className="flex justify-between items-center">
             <h4 className=" text-2xl font-medium">Add New Player</h4>
             <div className="flex gap-4 items-center">

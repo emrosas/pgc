@@ -10,7 +10,7 @@ const GameScreen = () => {
   // };
 
   return (
-    <main className="px-page grid gap-x-8 h-screen grid-cols-6">
+    <main className="px-page grid gap-x-8 h-screen grid-cols-6 grid-rows-[auto,1fr]">
       <Navbar />
       <PlayerList />
       <GameModals />

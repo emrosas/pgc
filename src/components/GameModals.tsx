@@ -2,6 +2,7 @@ import Extras from "../assets/extras.svg";
 import Cancel from "../assets/cancel.svg";
 import ModalWrapper from "./ui/ModalWrapper";
 import ModalAddPoints from "./ModalAddPoints";
+import ModalTimer from "./ModalTimer";
 import ModalRandomPicker from "./ModalRandomPicker";
 
 function GameModals() {
@@ -10,7 +11,7 @@ function GameModals() {
       <div className="flex flex-col flex-grow gap-4">
         <ModalWrapper children={<ModalAddPoints />} />
         <ModalWrapper children={<ModalRandomPicker />} />
-        {/* <ModalWrapper children={<div />} /> */}
+        <ModalWrapper children={<ModalTimer />} />
       </div>
     </aside>
   );
