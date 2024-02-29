@@ -9,7 +9,7 @@ const ModalAddPoints = ({}) => {
   const addPoints = useGameStore((state) => state.addPoints);
 
   const [selectedPlayer, setSelectedPlayer] = useState("");
-  const [points, setPoints] = useState(0);
+  const [points, setPoints] = useState(Infinity);
 
   const handleAdd = (e: any) => {
     e.preventDefault();
@@ -28,6 +28,9 @@ const ModalAddPoints = ({}) => {
     setSelectedPlayer("");
   };
 
+  const handleSetPoints = (e: any) => {
+    setPoints(e.target.value);
+  };
   return (
     <form className="flex flex-col gap-4 text-center">
       <h4 className=" text-3xl">Add Points</h4>
@@ -57,7 +60,7 @@ const ModalAddPoints = ({}) => {
           } text-center flex-shrink rounded-lg focus:outline-none focus:ring focus:ring-brand-3 px-4 py-2 bg-light-2 border border-dark-3 border-opacity-50`}
           type="number"
           value={points}
-          onChange={(e) => setPoints(Number(e.target.value))}
+          onChange={handleSetPoints}
         />
         <button
           className="p-2 bg-light-2 border border-dark-3 border-opacity-50 rounded-lg focus:outline-none focus:ring focus:ring-brand-3"

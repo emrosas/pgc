@@ -4,8 +4,8 @@ import Pause from "../assets/timer-pause.svg";
 import Restart from "../assets/timer-restart.svg";
 
 const ModalTimer = () => {
-  const [timer, setTimer] = useState(0);
-  const [lastTimer, setLastTimer] = useState(0);
+  const [timer, setTimer] = useState(Infinity);
+  const [lastTimer, setLastTimer] = useState(Infinity);
   const intervalRef = useRef() as any;
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
