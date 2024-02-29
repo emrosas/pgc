@@ -9,7 +9,7 @@ const ModalAddPoints = ({}) => {
   const addPoints = useGameStore((state) => state.addPoints);
 
   const [selectedPlayer, setSelectedPlayer] = useState("");
-  const [points, setPoints] = useState(Infinity);
+  const [points, setPoints] = useState(0);
 
   const handleAdd = (e: any) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ const ModalAddPoints = ({}) => {
   };
 
   const handleSetPoints = (e: any) => {
-    setPoints(e.target.value);
+    setPoints(parseInt(e.target.value));
   };
   return (
     <form className="flex flex-col gap-4 text-center">
