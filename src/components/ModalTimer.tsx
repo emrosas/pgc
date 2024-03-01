@@ -46,7 +46,7 @@ const ModalTimer = () => {
   return (
     <form className="grid gap-4 grid-cols-2" onSubmit={startTimer}>
       <div className="col-span-1 flex flex-col">
-        <h4 className=" text-3xl">Timer</h4>
+        <h4 className="text-2xl lg:text-3xl">Timer</h4>
         <p className="text-sm">Enter a time in seconds</p>
       </div>
       <input

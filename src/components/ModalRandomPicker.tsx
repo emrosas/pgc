@@ -17,7 +17,7 @@ const ModalRandomPicker = () => {
 
   return (
     <form className="flex flex-col gap-4 text-center">
-      <h4 className=" text-3xl">Random Player Picker</h4>
+      <h4 className="text-2xl lg:text-3xl">Random Player Picker</h4>
       <div className="flex -mr-4">
         <input
           type="text"

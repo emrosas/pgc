@@ -33,7 +33,7 @@ const ModalAddPoints = ({}) => {
   };
   return (
     <form className="flex flex-col gap-4 text-center">
-      <h4 className=" text-3xl">Add Points</h4>
+      <h4 className="text-2xl lg:text-3xl">Add Points</h4>
 
       <select
         name="player"
@@ -50,22 +50,22 @@ const ModalAddPoints = ({}) => {
 
       <div className="flex items-stretch justify-center gap-2">
         <button
-          className="p-2 bg-light-2 border border-dark-3 border-opacity-50 rounded-lg focus:outline-none focus:ring focus:ring-brand-3"
+          className="p-1 min-w-8 bg-light-2 border border-dark-3 border-opacity-50 rounded-lg focus:outline-none focus:ring focus:ring-brand-3"
           onClick={handleSubtract}>
-          <img src={Minus} alt="A minus sign" />
+          <img src={Minus} alt="A minus sign" className="size-8" />
         </button>
         <input
           className={`${
             points < 0 && "text-red-600"
-          } text-center flex-shrink rounded-lg focus:outline-none focus:ring focus:ring-brand-3 px-4 py-2 bg-light-2 border border-dark-3 border-opacity-50`}
+          } text-center flex-shrink flex-grow-0 rounded-lg focus:outline-none focus:ring focus:ring-brand-3 px-4 py-2 bg-light-2 border border-dark-3 border-opacity-50`}
           type="number"
           value={points}
           onChange={handleSetPoints}
         />
         <button
-          className="p-2 bg-light-2 border border-dark-3 border-opacity-50 rounded-lg focus:outline-none focus:ring focus:ring-brand-3"
+          className="p-1 min-w-8 bg-light-2 border border-dark-3 border-opacity-50 rounded-lg focus:outline-none focus:ring focus:ring-brand-3"
           onClick={handleAdd}>
-          <img src={Plus} alt="A plus sign" />
+          <img src={Plus} alt="A plus sign" className="size-8" />
         </button>
       </div>
 
